@@ -20,7 +20,31 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              SizedBox(
+                height: 60,
+              ),
+              Text(
+                "Hello!",
+                style: TextStyle(fontSize: 24, color: Colors.black),
+              ),
+              Text(
+                "Tarciso Torres",
+                style: TextStyle(
+                  fontSize: 26,
+                  color: Colors.black,
+                  fontWeight: FontWeight.w800
+                ),
+              )
+            ],
+          ),
+        ),
+      ),
       endDrawer: SidebarLayout(),
     );
   }
